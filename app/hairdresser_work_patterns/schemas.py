@@ -5,7 +5,7 @@ from typing import Optional
 
 
 class CreateHairdresserWorkPatterns(BaseModel):
-
+    hairdresser_id: UUID
     salon_id: int = Field(gt=0, description="ID салона")
     weekday: int = Field(ge=1, le=7, description="День недели (1=Пн, 7=Вс)")
     shift_start: time = Field(description="Начало смены (HH:MM:SS)")

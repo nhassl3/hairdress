@@ -35,3 +35,4 @@ class HairdresserWorkPatterns(Base):
     hairdresser: Mapped["Hairdressers"] = relationship(back_populates="work_patterns")
     salon: Mapped["Salons"] = relationship(back_populates="work_patterns")
     schedules: Mapped[list["HairdresserSchedules"]] = relationship(back_populates="pattern")
+
